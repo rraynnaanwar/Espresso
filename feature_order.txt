@@ -8,11 +8,7 @@ All_Orders
 Avg_Items_Per_Order
 Customer_Label
 Label_List
-Regular Customer
-Low Spend Customer
-High Spend Customer
 Non-Regular Customer
-Cluster
-Hover_Info
-PCA_1
-PCA_2
+Low Spend Customer
+Regular Customer
+High Spend Customer
