@@ -1,0 +1,18 @@
+Customer ID
+Total_Orders
+Total_Spent
+Total_Quantity
+Hour
+Unique_Visit_Days
+All_Orders
+Avg_Items_Per_Order
+Customer_Label
+Label_List
+Regular Customer
+Low Spend Customer
+High Spend Customer
+Non-Regular Customer
+Cluster
+Hover_Info
+PCA_1
+PCA_2
