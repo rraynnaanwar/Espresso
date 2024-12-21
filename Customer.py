@@ -12,7 +12,7 @@ class Customer:
         Returns: 
             None
         '''
-        # initialize customer attributes
+        # initialize customer account attributes
         self.name = name
         self.email = email
         self.password = password
@@ -67,7 +67,7 @@ class Customer:
         """
         freq = 0
         for order in self.history:
-            if order[1] > datetime:
+            if order[1] > self.datetime:
                 freq += 1
         return freq
     
