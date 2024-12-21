@@ -11,7 +11,7 @@ class Customer:
         self.name = name
         self.email = email
         self.password = password
-        self.uid = self.create_new_uid(self.name, self.email)
+        self.uid = self.create_new_uid(self.name, self.email, self.password)
         self.history = {}
         self.num_points = 0
     
@@ -30,12 +30,13 @@ class Customer:
         """
         self.num_points -= points
     
-    def create_new_uid(self, name, email):
+    def create_new_uid(self, name, email, password):
         """
-        create a new uid for customer based on name and email
+        create a new uid for customer based on name, email, and password
 
         name: str | name of customer
         email: str | email of customer
+        password: str | password of customer
         """
         return 0
     
