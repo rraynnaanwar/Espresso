@@ -19,7 +19,7 @@ class Customer:
         self.uid = self.create_new_uid(self.name, self.email, self.password)
         self.history = {}
         self.num_points = 0
-    
+
     def add_order_to_history(self, details, datetime, subtotal):
         """
         Args:
