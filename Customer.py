@@ -1,13 +1,18 @@
 class Customer:
     def __init__(self, name, email, password):
         '''
-        uid: int | unique identifier for customer
-        email: str | email of customer
-        password: str | password of customer
-        uid: int | unique identifier for customer
-        history: list of tuples (details, datetime)
-        num_points: int | number of points customer has
+        Args:
+            name: str | name of customer
+            email: str | email of customer
+            password: str | password of customer
+            uid: int | unique identifier for customer
+            history: dict | key: datetime, value: details of items in order
+            num_points: int | number of points customer has
+
+        Returns: 
+            None
         '''
+        # initialize customer attributes
         self.name = name
         self.email = email
         self.password = password
@@ -17,26 +22,36 @@ class Customer:
     
     def add_order_to_history(self, details, datetime, subtotal):
         """
-        details: str | details of items in order
-        datetime: datetime | datetime of order
-        subtotal: int | subtotal of order
+        Args:
+            details: str | details of items in order
+            datetime: datetime | datetime of order
+            subtotal: int | subtotal of order
+
+        Returns:
+            None
         """
         self.history[datetime] = details
         self.num_points += subtotal
     
     def redeem_points(self, points):
         """
-        points: int | points to redeem for reward
+        Args:
+            points: int | points to redeem for reward
+
+        Returns:
+            None
         """
         self.num_points -= points
     
     def create_new_uid(self, name, email, password):
         """
-        create a new uid for customer based on name, email, and password
+        Args:
+            name: str | name of customer
+            email: str | email of customer
+            password: str | password of customer
 
-        name: str | name of customer
-        email: str | email of customer
-        password: str | password of customer
+        Returns:
+            uid: int | unique identifier for customer
         """
         return 0
     
@@ -44,7 +59,11 @@ class Customer:
         """
         get frequency of visits after a certain datetime
 
-        datetime: datetime | datetime to check frequency of visits after
+        Args:
+            datetime: datetime | datetime to check frequency of visits after
+
+        Returns:
+            freq: int | frequency of visits after datetime
         """
         freq = 0
         for order in self.history:
